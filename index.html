@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
+    <div class="cursor-glow"></div>
     <div class="center">
       <nav class="zone sticky">
         <ul class="main-nav">
@@ -29,16 +30,54 @@
       </div>
       <img class="cover" src="img\undraw.png" />
     </div>
-    <div class="zone blue grid-wrapper">
-      <div class="box zone"><img src="img\data_storage_2_2.png" /></div>
-      <div class="box zone"><img src="img\desktop_analytics_2.png" /></div>
-      <div class="box zone"><img src="img\files_2.png" /></div>
-      <div class="box zone"><img src="img\monitor_coding_2.png" /></div>
-      <div class="box zone"><img src="img\monitor_settings_2.png" /></div>
-      <div class="box zone"><img src="img\server_2_2.png" /></div>
-      <div class="box zone"><img src="img\server_3.png" /></div>
-      <div class="box zone"><img src="img\server_safe_2.png" /></div>
+    <div class="zone blue">
+      <h3>Our Features</h3>
+      <p class="featured-para">
+        Powerful layout blocks designed for modern websites.
+      </p>
+      <div class="grid-wrapper">
+        <div class="box zone card"><img src="img\data_storage_2_2.png" /></div>
+        <div class="box zone card">
+          <img src="img\desktop_analytics_2.png" />
+        </div>
+        <div class="box zone card"><img src="img\files_2.png" /></div>
+        <div class="box zone card"><img src="img\monitor_coding_2.png" /></div>
+        <div class="box zone card">
+          <img src="img\monitor_settings_2.png" />
+        </div>
+        <div class="box zone card"><img src="img\server_2_2.png" /></div>
+        <div class="box zone card"><img src="img\server_3.png" /></div>
+        <div class="box zone card"><img src="img\server_safe_2.png" /></div>
+      </div>
     </div>
-    <footer class="zone yellow">Footer</footer>
+    <footer class="zone yellow">
+      <h6>
+        NovaLayout Built for modern UI development. © 2026 All Rights Reserved.
+      </h6>
+      <h6>Author @ M. Ibrahim Tariq</h6>
+    </footer>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+
+      window.addEventListener("scroll", () => {
+        cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+
+          if (cardTop < window.innerHeight - 100) {
+            card.classList.add("show");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      const glow = document.querySelector(".cursor-glow");
+
+      window.addEventListener("mousemove", (e) => {
+        glow.style.left = `${e.clientX}px`;
+        glow.style.top = `${e.clientY}px`;
+      });
+    </script>
   </body>
 </html>
