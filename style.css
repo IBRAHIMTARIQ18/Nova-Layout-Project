@@ -22,10 +22,19 @@ body {
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
+.nav-center {
+    display: flex;
+    justify-content: center;
+}
+
 .sticky {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 20px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 15px;
 }
 
 .main-nav {
